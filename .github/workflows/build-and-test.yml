@@ -34,6 +34,7 @@ jobs:
       - name: configure cmake
         env:
           CXX: ${{ matrix.compiler }}
+          CXXFLAGS: -Wall -Wextra -Wpedantic -Wshadow -Wold-style-cast
         shell: bash
         working-directory: ${{ runner.workspace }}/_build
         run: >
