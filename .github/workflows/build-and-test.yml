@@ -75,6 +75,7 @@ jobs:
       - name: configure cmake
         env:
           CXX: ${{ matrix.compiler }}
+          CXXFLAGS: -Werror -Wall -Wextra -Wpedantic -Wshadow -Wold-style-cast
         shell: bash
         working-directory: ${{ github.workspace }}/_build
         run: >
@@ -130,6 +131,7 @@ jobs:
       - name: configure cmake
         env:
           CXX: ${{ matrix.compiler }}
+          CXXFLAGS: -Werror -Wall -Wextra -Wpedantic -Wshadow -Wold-style-cast
         shell: bash
         working-directory: ${{ github.workspace }}/_build
         run: >
